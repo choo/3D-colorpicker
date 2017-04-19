@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>3D color picker</title>
+	<meta charset="UTF-8">
+	<meta name="copyright" content="Choo Sugimori">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+</head>
+
+<body>
+	<div id="main" class="container">
+
+		<!--<div id="header" class="jumbotron">-->
+		<div id="header" class="page-header">
+			<div class="container">
+				<h1>3D Color Picker</h1>
+				<p>
+					<span>You can pick RGB or HLS color code using RGB color cube and HSV color cone. </span>
+				</p>
+				<ul>
+					<li>
+						<span>If you click any color cube on below, preview color and color codes will be shown. </span>
+					</li>
+					<li>
+						<span>You can zoom up/out using scrolling with mouse wheel.</span>
+					</li>
+					<li>
+						<span>You can change the camera angle using drag and drop (drag and drop with right-click enables you to change the position of cube or cone). </span>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div id="main" class="container">
+
+				<div id="color_model_selector" class="btn-group" data-toggle="buttons">
+					<label class="color_model_btn btn btn-default active">
+						<input type="radio" name="options" value="rgb" checked autocomplete="off">
+							<span>RGB</span>
+					</label>
+					<label class="color_model_btn btn btn-default">
+						<input type="radio" name="options" value="hsv" autocomplete="off">
+							<span>HSV</span>
+					</label>
+					<!--
+					<label class="color_model_btn btn btn-default">
+						<input type="radio" name="options" value="hls" autocomplete="off">
+							<span>HLS</span>
+					</label>
+					-->
+				</div>
+
+			<div class="row">
+				<div id="canvas_wrapper" class="col-md-8">
+					<div id="rgb_container"></div>
+					<div id="hsv_container" style="display:none;"></div>
+					<!--<div id="hls_container" style="display:none;"></div>-->
+				</div>
+
+				<div class="col-md-4">
+					<table class="table mt-10">
+						<tbody>
+							<tr>
+								<td class="col-md-3">color preview</td>
+								<td class="col-md-5" id="color_preview_rgb"></td>
+							</tr>
+							<tr>
+								<td>RGB</td>
+								<td>
+									<span id="rgb_color">not selected</span>
+								</td>
+							</tr>
+							<tr>
+								<td>HSL</td>
+								<td>
+									<span id="hsl_color">not selected</span>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+		</div>
+
+		<div id="footer">
+			<p class="copyright text-right">Copyright © 2017 Choo Sugimori</p>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/84/three.min.js"></script>
+	<script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
+	<!-- TODO: use clipboard.js for copy color code 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.0/clipboard.min.js"></script>
+	-->
+
+	<script src="./js/colorutils.js"></script>
+	<script src="./js/rgbcubes.js"></script>
+	<script src="./js/hsvcubes.js"></script>
+	<script src="./js/threerenderer.js"></script>
+	<script src="./js/main.js"></script>
+
+</body>
