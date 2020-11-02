@@ -3,7 +3,7 @@ color picker based on HSV 3D color cone
 
 ## CAUTION
 
-This repository is an **older version** of the Color Picker application, and the [latest improved version](https://colorspace.choo.works/) of the repository is [here](https://github.com/choo/color-space-visualizer).
+This repository is an **old version** of the Color Picker application, and the repository of [latest improved version](https://colorspace.choo.works/) is [here](https://github.com/choo/color-space-visualizer).
 
 ## Demo
 
